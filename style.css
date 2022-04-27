@@ -445,7 +445,7 @@ footer ul {
     flex-direction: column;}
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
     #logo img{
       width: 250px;  
     }
