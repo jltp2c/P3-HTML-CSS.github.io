@@ -1,0 +1,452 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(assets/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    list-style: none;
+}
+nav{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+   
+}
+
+nav ul li{
+    cursor: pointer;
+    position :relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav ul :hover{
+    color: rgb(113, 7, 171);
+    font-weight: bold;
+}
+
+nav ul li:hover::after{
+    content:"";
+    position:absolute;
+    background: rgb(113, 7, 171);
+    height: 3px;
+    width: 100%;
+    left:50%;
+    top:0;
+    transform: translateX(-50%) scaleX(0);
+    animation: anim ease-in-out 1s forwards;
+}
+
+@keyframes anim {
+    100%{
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+#language{
+    background: rgba(154, 152, 152, 0.489);
+    border-radius: 10px;
+}
+
+header{
+    background-image: url("../P3/assets/img/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height:75vh;
+}
+
+.main-header{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px;
+margin: 30px;
+}
+
+h1{
+    color: white;
+    margin: 40px;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    padding : 10px;
+    opacity : 0.8;
+}
+
+button:hover{
+    transition: all 1s;
+    width: 220px;
+    letter-spacing: 2px;
+    box-shadow: rgba(154, 152, 152, 0.489);
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+}
+
+.header-text{
+    font-size: 17px;
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+    height: 100px;
+}
+
+.news-part{
+    background: whitesmoke;
+    padding: 50px;
+}
+
+.icon-part{
+    background: black;
+    color: white;
+    text-align: center;
+    height : 500px;
+    width: 100%;
+}
+
+.icon-part-container{
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    font-size: 15px;
+  
+}
+
+.list-icon-part{
+    width: 450px;
+    height: 500px;
+    padding: 20px;
+}
+
+.list-icon-part button{
+    margin: 50px;
+}
+
+.header-news{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 20px;
+    place-items: center;
+}
+.left-part p{
+    font-size: 14px;
+}
+
+.header-news button:hover{
+    transition: ease-in-out 1s;
+    width: 320px;
+    letter-spacing: 2px;
+    box-shadow: rgba(154, 152, 152, 0.489);
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+}
+
+.main-news-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 70px;
+    font-size: 10Px;
+}
+
+.main-news-container p{
+    font-size: 12px;
+    width: 250px;
+    height: 130px;
+    margin-top: 10px;
+
+}
+.main-news-container h4{
+    width: 320px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.link a{
+    text-decoration: none;
+    color: rgb(113, 7, 171) ;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom:  20px;
+}
+
+.contact-list{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.list{
+    padding : 20px;
+    width: 300px;
+    
+}
+h5{
+    font-size: 17px;
+    text-transform: uppercase;
+    margin: 10px;
+}
+.infos-p a, .list a{
+    text-decoration: none;
+    color: rgb(113, 7, 171) ;
+}
+
+.contact-medias{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    place-items: center;
+    margin-bottom: 20px;
+    position:relative;
+}
+
+.medias-logos{
+    width: 50%;
+    position: relative;
+}
+
+img{
+    margin: 5px;
+}
+
+.medias-text h3{
+    text-transform: uppercase;
+    margin: 10px;
+}
+.medias-text p{
+    margin: 10px;
+    width: 300px;
+}
+
+footer{
+    background: black;
+}
+
+footer h3{
+    color :white;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media screen and (max-width: 1400px) {
+    nav ul li{
+    font-size: 15px;
+    }
+    nav ul li:hover::after{
+        display:none;
+    }
+   
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul li{
+    font-size: 13px;
+    }
+    .icon-part-container{
+        font-size: 12px;
+    }    
+}
+
+@media screen and (max-width: 1150px) {
+    nav ul li{
+    font-size: 11px;
+    }
+    header{
+        height:1000px;
+    }
+    h1{
+        position: relative;
+        font-size: 26px;
+        top: 80px;
+    }
+
+    .main-header button{
+        position: absolute;
+        bottom:10px;
+
+    }
+    .header-text p{
+        font-size: 15px;
+    }
+    .icon-part-container{
+        display: inline-block;
+    }
+    .icon-part{
+        background: black;
+        color: white;
+        text-align: center;
+        height : 1250px;
+        width: 100%;
+    }
+    .list-icon-part{
+        height: 400px;
+    }
+    footer ul {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 965px) {
+    nav ul li{
+    font-size: 9px;
+    }
+
+    .news-part{
+        display: block;
+        text-align :center;
+    }
+    .header-news{
+        display: block;
+        margin: 10px;
+    }
+    .right-part button{
+        margin:30px;
+    }
+    .right-part button:hover{
+        width: 220px;
+    }
+    .main-news-container {
+        display:inline-block;
+        align-items: center;
+    }
+    .main-news-container p{
+        display:inline-block;
+        align-items: center;
+    }
+
+    .contact-list{
+        font-size: 14px;
+    }
+
+    .link{
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+    nav ul {
+        font-size: 9px;
+        display: block;
+        align-items : center;
+        }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .main-header button{
+        position: absolute;
+        bottom:-200px;
+
+    }
+    .contact-container{
+        display: block;
+        text-align: center;
+    }
+    .contact-list,.contact-medias{
+        display: inline-block;
+        text-align: center;
+    }
+    .contact-medias p{
+        display: inline-block;
+        align-items: center;
+        margin-bottom:20px
+    }
+
+    .medias-logos{
+        display: inline-block;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .list{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #logo img{
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .list-icon-part{
+        width: 300px;
+    }
+    .list-icon-part button{
+        width: 100px;
+    }
+
+    .right-part button{
+        width: 150px;
+        height: 50px;
+        margin: 10px;
+        padding: 10px;
+    }
+    h4{
+        display: block;
+        text-align: center;
+    }
+
+    .mn-pic img{
+        width: 300px;
+    }
+
+    .list{
+        width: 200px;
+    }
+
+    h4{
+        display: block;
+        align-items: center;
+    }
+    #contact-img img{
+        width: 100px;
+    }
+
+    .main-news{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-news-container{
+    display: flex;
+    flex-direction: column;}
+}
+
+@media screen and (max-width: 350px) {
+    #logo img{
+      width: 250px;  
+    }
+}
